@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title></title>
+    <title>ac-multi-tabs</title>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
@@ -14,9 +14,45 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-2"><a href="#ac-multi-tabs">ac-multi-tabs</a></li>
+    <li class="sidebar-header-3"><a href="#1.-简介">1. 简介</a></li>
+    <li class="sidebar-header-3"><a href="#2.-安装">2. 安装</a></li>
+    <li class="sidebar-header-3"><a href="#3.-使用">3. 使用</a></li>
+    <li class="sidebar-header-3"><a href="#4.-预览">4. 预览</a></li>
+    <li class="sidebar-header-3"><a href="#5.-参数">5. 参数</a></li>
 </ul>
       </div>
-      <div class="span9 main"><p>### </p>
+      <div class="span9 main"><h2 id="ac-multi-tabs">ac-multi-tabs</h2>
+<p><a href="https://www.npmjs.com/package/ac-multi-tabs"><img src="https://img.shields.io/npm/v/ac-attachment.svg" alt="npm version"></a>
+<a href="https://npmjs.org/package/ac-multi-tabs"><img src="http://img.shields.io/npm/dt/ac-attachment.svg?style=flat" alt="NPM downloads"></a></p>
+<h3 id="1.-简介">1. 简介</h3>
+<p>多页签组件(基于应用平台)</p>
+<h3 id="2.-安装">2. 安装</h3>
+<pre class="hljs"><code>npm install ac-multi-tabs -S</code></pre><h3 id="3.-使用">3. 使用</h3>
+<pre class="hljs"><code><span class="hljs-keyword">import</span> AcMultiTabs <span class="hljs-keyword">from</span> <span class="hljs-string">'ac-multi-tabs'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'ac-multi-tabs/dist/index.css'</span>;</code></pre><pre class="hljs"><code>&lt;AcMultiTabs menus={menus} /&gt;</code></pre><p>更多用法可以参考<a href="./demo/demolist">demo</a>文件夹中的示例</p>
+<h3 id="4.-预览">4. 预览</h3>
+<h3 id="5.-参数">5. 参数</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>menus</td>
+<td><code>Array</code></td>
+<td></td>
+<td>是</td>
+<td>显示的页签数组</td>
+</tr>
+</tbody>
+</table>
       </div>
     </div>
   </div>
