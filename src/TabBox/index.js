@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDom from 'react-dom';
 import {Button,Con,Col,Tile,Icon,Tooltip} from 'tinper-bee';
-// import mirror, { connect,actions } from 'mirrorx';
 require('./style.scss');
 
 class Tab extends Component {
@@ -40,7 +39,7 @@ class Tab extends Component {
     }
 
     setCurrent (id) {
-        // debugger;
+        // debugger
         let morelist = this.state.moreMenuList;
         let menuProp = this.props.menus;
         let list = [];
@@ -50,24 +49,25 @@ class Tab extends Component {
           // return;
           for (var i = 0; i < morelist.length; i++) {
             if(morelist[i].id === id) {
-              moreFlag = true;
-              obj = morelist[i];
-              break;
+                moreFlag = true;
+                obj = morelist[i];
+                break;
             } else {
-              moreFlag = false;
+                moreFlag = false;
             }
           }
           if(moreFlag) {
             for (var i = 0; i < menuProp.length; i++) {
-              if(menuProp[i].id === id) {
-                menuProp.splice(i,1);
-              }
+                if(menuProp[i].id === id) {
+                    menuProp.splice(i,1);
+                }
             }
             menuProp.splice(9,0,obj);
           }
         }
         this.setState({
-          current: id
+          current: id,
+          menus: menuProp
         })
         // console.log('123',this.props.menus);
         // actions.app.updateState({
@@ -102,10 +102,9 @@ class Tab extends Component {
             data.current=menuCloned[num].id;
             data.router=menuCloned[num].router;
         }
+        // var match = /(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/;
 
-        var match = /(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/;
-
-        var ifr = document.getElementById(id);
+        // var ifr = document.getElementById(id);
         //TODO 跨域try catch
         // if(ifr.src.match(match)!=null){
         //     if(ifr.src.match(location.host)!=null){
@@ -140,7 +139,6 @@ class Tab extends Component {
             menus: data.menus,
             tabNum: data.tabNum
         })
-        // actions.app.updateState(data)
 
         return menuCloned;
     }
@@ -174,14 +172,10 @@ class Tab extends Component {
     }
     // 页签更多的点击事件
     tabsMoreClick() {
-      const {tabsMore} = this.props;
+      const {tabsMore} = this.state;
       this.setState({
         tabsMore: !tabsMore
       })
-      // actions.app.updateState({
-      //     tabsMore: !tabsMore
-      // })
-      // console.log(this.props);
     }
     //控制头部是否显示
     showHeaderClick() {
@@ -198,6 +192,7 @@ class Tab extends Component {
         // let {tabsMore} = this.props;
         const moremenu=[];
         this.state.moreMenuList = [];
+        let tabsMoreCls = tabsMore? 'show' : 'hide';
         // console.log(menus);
         return (
 
@@ -235,7 +230,7 @@ class Tab extends Component {
                             })
                         }
                         {
-                          menus.length>11? <li className="tabs-more" onClick={self.tabsMoreClick.bind(this)}><a href="javascript:;">{"更多"}</a>{!tabsMore?<i className="uf uf-gridcaretarrowup tabs-up"></i>:<i className="uf uf-treearrow-down tabs-up"></i>}<ul className={tabsMore?'tabs-more-list tabs-more-list-show':'tabs-more-list tabs-more-list-hide'}>
+                          menus.length>11? <li className="tabs-more" onClick={self.tabsMoreClick.bind(this)}><a href="javascript:;">{"更多"}</a>{tabsMore?<i className="uf uf-gridcaretarrowup tabs-up"></i>:<i className="uf uf-treearrow-down tabs-up"></i>}<ul className={`tabs-more-list tabs-more-list-${tabsMoreCls}`}>
                           {
                             moremenu.map(function(item1,index1){
                               return (
