@@ -4,6 +4,14 @@ import ReactDom from 'react-dom';
 import {Button,Con,Col,Tile,Icon,Tooltip} from 'tinper-bee';
 require('./style.scss');
 
+const propTypes = {
+    menus: PropTypes.array,
+    onChange: PropTypes.func
+};
+const defaultProps = {
+    menus: [],
+    onChange: () => {},
+};
 class Tab extends Component {
     constructor(props) {
         super(props);
@@ -62,7 +70,7 @@ class Tab extends Component {
                     menuProp.splice(i,1);
                 }
             }
-            menuProp.splice(9,0,obj);
+            menuProp.splice(1,0,obj);
           }
         }
         this.setState({
@@ -83,6 +91,7 @@ class Tab extends Component {
 
     del (id) {
         const {menus,current} = this.state;
+        const { onChange } = this.props;
         var menuCloned = JSON.parse(JSON.stringify(menus));
 
         var num = 0;
@@ -139,7 +148,7 @@ class Tab extends Component {
             menus: data.menus,
             tabNum: data.tabNum
         })
-
+        onChange && onChange(data.menus);
         return menuCloned;
     }
 
@@ -256,4 +265,6 @@ class Tab extends Component {
     }
 }
 
+Tab.propTypes = propTypes;
+Tab.defaultProps = defaultProps;
 export default Tab;

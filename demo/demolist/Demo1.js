@@ -25,7 +25,7 @@ class Demo1 extends Component {
     // 增加
     add = (e) => {
         e.stopPropagation();
-        index++;
+        ++index;
         const newTab = {
             id: index++ ,
             title: `节点: ${index}`,
@@ -35,13 +35,20 @@ class Demo1 extends Component {
             menus: this.state.menus.concat(newTab),
         });
     }
+
+    handleChange = (v) => {
+        console.log(v)
+        this.setState({
+            menus : v
+        })
+    }
     
     render () {
         const { menus } = this.state;
         return (
             <div className="demoPadding">
                 <Button colors="primary" onClick={this.add} style={{margin: '8px'}}>增加</Button>
-                <AcMultiTabs menus={menus} />
+                <AcMultiTabs menus={menus} onChange={this.handleChange}/>
             </div>
         )
     }

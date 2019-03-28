@@ -7,6 +7,7 @@
   width:100%;
   /* overflow: hidden; */
   /* min-width:1200px; */
+  border-bottom: 1px solid #b3bac5;
 }
 .ifr-tabs {
   visibility: hidden;
@@ -53,7 +54,7 @@
   border-right:1px solid #eee;
   box-sizing: border-box;
   background:#fff;
-  color:#666;
+  color:#212121;
   padding: 0 32px 0 8px;
   &:hover{
     background: rgb(235, 236, 240);
@@ -70,6 +71,9 @@
 }
 .tabs-list li.selected::after {
 background: rgba(244,67,54,1);
+}
+.tabs-list .tabs-more-list li::after{
+  display: none;
 }
 .tabs-list li.home-item{
   width:44px;
@@ -92,7 +96,7 @@ background: rgba(244,67,54,1);
   // padding:0 10px;
 }
 .tabs-list li a {
-  color:#666;
+  color:#212121;
   text-decoration: none;
   /* padding:0 16px 0 10px; */
   display:block;
@@ -148,20 +152,20 @@ background: rgba(244,67,54,1);
   color:#ccc;
 }
 .tabs-list li i.tabs-up {
-font-size:12px;
-cursor: pointer;
-transition: all 0.3s ease 0s;
-position:absolute;
-right:0px;
-top:7px;
-height:15px;
-width:15px;
-line-height:15px;
-color:#ccc;
-padding: 0;
+  font-size:12px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position:absolute;
+  right:0px;
+  top:7px;
+  height:15px;
+  width:15px;
+  line-height:15px;
+  color:#ccc;
+  padding: 0;
 }
 .tabs-list li i.tabs-up:hover {
-color:red;
+  color:red;
 }
 .scroll-tools {
   position:absolute;
@@ -294,28 +298,30 @@ position: relative;
 text-align: left;
 }
 .tabs-more-list {
-min-width: 200px;
-position: absolute;
-display: none;
-z-index: 2000;
-background: #fff;
-padding: 8px 0;
-border-radius: 4px;
-left:0;
-top:30px;
-box-shadow: 3px 6px 12px rgba(0,0,0,.175);
+  position: absolute;
+  display: none;
+  z-index: 2000;
+  background: #fff;
+  padding: 8px 0;
+  border-radius: 4px;
+  left:0;
+  top:30px;
+  box-shadow: 3px 6px 12px rgba(0,0,0,.175);
+  max-height: 300px;
+  overflow-y: auto;
 }
 .tabs-list .tabs-more-list li {
-width: 100%;
-min-width: 200px;
-background: #fff;
+  padding: 0 12px;
+  width: 100%;
+  background: #fff;
 }
 .tabs-more-list li:hover {
-background-color: rgba(236,239,241,1);
+  background-color: rgba(236,239,241,1);
 }
 .tabs-more-list li a {
-font-size: 12px;
-color: #666;
+  width: 96px;
+  font-size: 12px;
+  color: #212121;
 }
 .tabs-more-list.tabs-more-list-show {
 display: block;

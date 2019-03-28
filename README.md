@@ -33,3 +33,4 @@ import 'ac-multi-tabs/dist/index.css';
 Parameter | Type | Default | Required | Description
 --------- | ---- | ------|----------- | -----------------
 menus | `Array` | | 是 | 显示的页签数组
+onChange | `Func` | | 否 | 页签数组发生改变时触发
