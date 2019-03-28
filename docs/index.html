@@ -15,24 +15,25 @@
     <div class="row-fluid">
       <div class="span3"><ul class="nav nav-list">
     <li class="sidebar-header-2"><a href="#ac-multi-tabs">ac-multi-tabs</a></li>
+    <li class="sidebar-header-2"><a href="#代码演示">代码演示</a></li>
     <li class="sidebar-header-3"><a href="#1.-简介">1. 简介</a></li>
     <li class="sidebar-header-3"><a href="#2.-安装">2. 安装</a></li>
     <li class="sidebar-header-3"><a href="#3.-使用">3. 使用</a></li>
-    <li class="sidebar-header-3"><a href="#4.-预览">4. 预览</a></li>
-    <li class="sidebar-header-3"><a href="#5.-参数">5. 参数</a></li>
+    <li class="sidebar-header-3"><a href="#4.-api">4. API</a></li>
 </ul>
       </div>
       <div class="span9 main"><h2 id="ac-multi-tabs">ac-multi-tabs</h2>
-<p><a href="https://www.npmjs.com/package/ac-multi-tabs"><img src="https://img.shields.io/npm/v/ac-attachment.svg" alt="npm version"></a>
-<a href="https://npmjs.org/package/ac-multi-tabs"><img src="http://img.shields.io/npm/dt/ac-attachment.svg?style=flat" alt="NPM downloads"></a></p>
+<p><a href="https://www.npmjs.com/package/ac-multi-tabs"><img src="https://img.shields.io/npm/v/ac-multi-tabs.svg" alt="npm version"></a>
+<a href="https://npmjs.org/package/ac-multi-tabs"><img src="http://img.shields.io/npm/dt/ac-multi-tabs.svg?style=flat" alt="NPM downloads"></a></p>
+<p>在线演示：<a href="https://tinper-acs.github.io/ac-multi-tabs/">https://tinper-acs.github.io/ac-multi-tabs/</a></p>
+<h2 id="代码演示">代码演示</h2>
 <h3 id="1.-简介">1. 简介</h3>
 <p>多页签组件(基于应用平台)</p>
 <h3 id="2.-安装">2. 安装</h3>
-<pre class="hljs"><code>npm install ac-multi-tabs -S</code></pre><h3 id="3.-使用">3. 使用</h3>
+<pre class="hljs"><code>npm install ac-multi-tabs --save</code></pre><h3 id="3.-使用">3. 使用</h3>
 <pre class="hljs"><code><span class="hljs-keyword">import</span> AcMultiTabs <span class="hljs-keyword">from</span> <span class="hljs-string">'ac-multi-tabs'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">'ac-multi-tabs/dist/index.css'</span>;</code></pre><pre class="hljs"><code>&lt;AcMultiTabs menus={menus} /&gt;</code></pre><p>更多用法可以参考<a href="./demo/demolist">demo</a>文件夹中的示例</p>
-<h3 id="4.-预览">4. 预览</h3>
-<h3 id="5.-参数">5. 参数</h3>
+<h3 id="4.-api">4. API</h3>
 <table>
 <thead>
 <tr>
@@ -50,6 +51,13 @@
 <td></td>
 <td>是</td>
 <td>显示的页签数组</td>
+</tr>
+<tr>
+<td>onChange</td>
+<td><code>Func</code></td>
+<td></td>
+<td>否</td>
+<td>页签数组发生改变时触发</td>
 </tr>
 </tbody>
 </table>
