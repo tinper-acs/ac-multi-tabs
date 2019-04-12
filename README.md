@@ -1,36 +1,32 @@
-## ac-multi-tabs
+# 多页签组件 MultiTabs
 
-[![npm version](https://img.shields.io/npm/v/ac-multi-tabs.svg)](https://www.npmjs.com/package/ac-multi-tabs)
-[![NPM downloads](http://img.shields.io/npm/dt/ac-multi-tabs.svg?style=flat)](https://npmjs.org/package/ac-multi-tabs)
-
-在线演示：https://tinper-acs.github.io/ac-multi-tabs/
-
-## 代码演示
-
-### 1. 简介
+## 何时使用
 
 多页签组件(基于应用平台)
 
-### 2. 安装
+## 如何使用
 
-```bash
-npm install ac-multi-tabs --save
 ```
-
-### 3. 使用
-```javascript
 import AcMultiTabs from 'ac-multi-tabs';
 import 'ac-multi-tabs/dist/index.css';
+
 ```
 
-```javascript
-<AcMultiTabs menus={menus} />
-```
-更多用法可以参考[demo](./demo/demolist)文件夹中的示例
+## 代码演示
 
 
-### 4. API
-Parameter | Type | Default | Required | Description
+## API 
+
+
+参数 | 类型 | 默认值 | 是否必填 | 说明
 --------- | ---- | ------|----------- | -----------------
 menus | `Array` | | 是 | 显示的页签数组
 onChange | `Func` | | 否 | 页签数组发生改变时触发
+
+
+
+## 注意事项
+
+暂无
+
+## 更新日志

@@ -42,6 +42,8 @@
     "babel-preset-es2015-loose": "^8.0.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "bee-clipboard": "^2.0.1",
+    "bee-drawer": "0.0.2",
     "bee-layout": "^1.2.7",
     "bee-panel": "^2.0.1",
     "css-loader": "^1.0.0",
